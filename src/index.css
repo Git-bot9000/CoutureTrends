@@ -5,47 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #EEEEEE;
+  background-color: #EEEEEE;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.jumbotronContainer{
-	max-width: 100%;
-	position: relative;
-	padding: 0;
-}
-
-.jumbotronContainer .jumbotronImage{
-	
-}
-
-.jumbotronContainer h2{
-	font-family: 'Montserrat', sans-serif;
-	position: absolute;
-	left: 2.3%;
-	right: 49.97%;
-	top: 36.88%;
-	bottom: 46.46%;
-	color: white;
-	font-size: 4vw;
-	width: 60%;
-}
-
-.buttonBlack{
-	position: absolute;
-	left: 2.3%;
-	right: 84.34%;
-	top: 57.29%;
-	bottom: 37.29%;
-	background: #333333;
-	border-radius: 0.6vw;
-	width: 12%;
-	height: 5%;
-	font-size: 0.8vw;
-	padding: 0.6%;
-	font-family: 'Montserrat', sans-serif;
 }
