@@ -2,7 +2,7 @@ import * as ActionTypes from './ActionTypes';
 import {baseUrl} from '../shared/baseUrl';
 
 export const attemptLogin = (emailId, password) => (dispatch) => {
-	const loginSession={
+	const loginSession = {
 		email_id: emailId,
 		password: password
 	}
@@ -56,3 +56,40 @@ export const loginFailed = (errMess) => ({
 export const logout = () => ({
 	type: ActionTypes.LOGOUT
 })
+
+export const attemptSignup = (email_id, password, firstname, lastname) => (dispatch) => {
+	const signupSession = {
+		email_id: email_id,
+		password: password,
+		firstname: firstname,
+		lastname: lastname
+	}
+
+	dispatch(loginLoading());
+
+	return fetch(baseUrl + 'signup', {
+		method: 'POST',
+		body: JSON.stringify(signupSession),
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		credentials: 'same-origin'
+	})
+		.then(response=>{
+			if(response.ok){
+				return response;
+			}
+			else{
+				let error = new Error('Error' + response.status + ': ' + response.message)
+				error.response = response;
+				throw error;
+			}
+		},
+		error => {
+			let errmess = new Error(error.message);
+			throw errmess;
+		})
+		.then(response => response.json())
+		.then(response => dispatch(attemptLogin(email_id, password)))
+		.catch(error => dispatch(loginFailed(error.message)));
+}

@@ -93,8 +93,8 @@
 .row .searchTab{
 	padding: 0;
 	position: absolute;
-	top: 96%;
-	height: 4%;
+	top: 95%;
+	height: 5%;
 	background-color: white;
 	opacity: 0.65;
 }
@@ -109,10 +109,10 @@
 
 .searchTabNav{
 	font-family: 'Montserrat', sans-serif;
-	padding: 0.5vw;
+	padding: 0.1vw;
 	border-radius: 0;
 	width: 50%;
-	font-size: 1.25vw;
+	font-size: 2vw;
 	height: 100%;
 	outline: none;
 	font-weight: bold;
@@ -134,18 +134,25 @@
 .logo{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 2.5vw;	
+	color: black;
 }
 
 .header{
-	min-height:3vw;
-	background-color: #DDDDDD;
+	position: sticky;
+	position: -webkit-sticky; /* Safari */
+  	top: 0;
+	height:3.5vw;
+	background-color: white;
 }
 
 .profileImg{
-	float:right;
+	position: absolute;
+	right: 0;
+	box-sizing: border-box;
 	margin-top: 1%;
-	height: 3vw;
-	width: 3vw;
+	margin-right: 3%;
+	color: black;
+	font-size: 2.5vw;
 }
 
 .modalLogin{
@@ -161,4 +168,198 @@
 	box-shadow: 0 0 0 0;
 	border: 0.078125vw solid white;
 	background: #000000;
+}
+
+.Img1{
+	position: relative;
+	width: 100%;
+}
+
+.Img1-container{
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+	padding-left: 2%;
+	padding-right: 1%;
+}
+
+.Media1{
+	position: relative;
+	margin-top: 10%;
+	background-color: #FFFFFF;
+	opacity: 0.8;
+}
+
+.Body1{
+	position: absolute;
+	top: 37.5%;
+	bottom: 37.5%;
+	right: 0%;
+	padding-left: 1%;
+	padding-right: 2%;
+	font-size: 1.2vw;
+	height: 25%;
+	opacity: 1;
+}
+
+.Body1 .media-heading{
+	font-size: 2vw;
+	margin-bottom: 0.5vw;
+	opacity: 1;
+}
+
+.Img2{
+	position: relative;
+	width: 100%;
+}
+
+.Img2-container{
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+	padding-left: 1%;
+	padding-right: 2%;
+}
+
+.Media2{
+	position: relative;
+	background-color: #FADBD8;
+	opacity: 0.8;
+}
+
+.Body2{
+	position: absolute;
+	top: 37.5%;
+	bottom: 37.5%;
+	left: 0%;
+	padding-left: 2%;
+	padding-right: 1%;
+	font-size: 1.2vw;
+	height: 25%;
+	opacity: 1;
+}
+
+.Body2 .media-heading{
+	font-size: 2vw;
+	margin-bottom: 0.5vw;
+	opacity: 1;
+}
+
+.Img3{
+	position: relative;
+	width: 100%;
+}
+
+.Img3-container{
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+	padding-left: 2%;
+	padding-right: 1%;
+}
+
+.Media3{
+	position: relative;
+	background-color: #FFFFFF;
+	opacity: 0.8;
+}
+
+.Body3{
+	position: absolute;
+	top: 37.5%;
+	bottom: 37.5%;
+	right: 0%;
+	padding-left: 1%;
+	padding-right: 2%;
+	font-size: 1.2vw;
+	height: 25%;
+	opacity: 1;
+}
+
+.Body3 .media-heading{
+	font-size: 2vw;
+	margin-bottom: 0.5vw;
+	opacity: 1;
+}
+
+.cardSet{
+	margin-top: 10%;
+	opacity: 1;
+}
+
+.cardSet .cardSetHeading{
+	opacity: 1;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 4vw;
+}
+
+.cardSet{
+	background-color: #FADBD8;
+}
+
+.cardContainer{
+	box-sizing: border-box;
+	float: left;
+	padding: 2%;
+	
+	background-color: #FADBD8;
+}
+
+.cardBody{
+	opacity: 1;
+}
+
+.card:hover{
+	cursor: pointer;
+	border: 1px solid black;
+}
+
+.card-title{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 80%;
+}
+
+.card-text{
+	font-size: 70%;
+}
+
+.footer{
+	position: relative;
+	float:left;
+	background-color: white;
+	left: 0;
+	right: 0;
+	height: 15vw;
+	width: 100%;
+}
+
+.footerInsides{
+	position: absolute;
+	bottom: 37.5%;
+	height: 25%;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.footerLogo{
+	top: 0.1vw;
+}
+
+.footerLogos{
+	position: relative;
+	height: 3.5vw; 
+	padding: 1%;
+	bottom: 0.4vw;
+}
+
+.copyright{
+	padding-top: 0.8vw;
+	padding-left: 8vw;
+	font-size: 1vw;
+}
+
+.aboveHeader{
+	position: sticky;
+	top: 0;
+	z-index: 99;
+	border-bottom: 0.078125vw solid black;
 }
