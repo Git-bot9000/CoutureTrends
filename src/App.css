@@ -137,6 +137,10 @@
 	color: black;
 }
 
+.logo:link, .logo:visited, .logo:hover, .logo:active, .logo:focus{
+	text-decoration: none;
+}
+
 .header{
 	position: sticky;
 	position: -webkit-sticky; /* Safari */
@@ -149,7 +153,7 @@
 	position: absolute;
 	right: 0;
 	box-sizing: border-box;
-	margin-top: 1%;
+	margin-top: 0.5%;
 	margin-right: 3%;
 	color: black;
 	font-size: 2.5vw;
@@ -309,6 +313,7 @@
 .card:hover{
 	cursor: pointer;
 	border: 1px solid black;
+	opacity: 0.65;
 }
 
 .card-title{
@@ -329,6 +334,7 @@
 	right: 0;
 	height: 15vw;
 	width: 100%;
+	bottom: 0;
 }
 
 .footerInsides{
@@ -362,4 +368,52 @@
 	top: 0;
 	z-index: 99;
 	border-bottom: 0.078125vw solid black;
+}
+
+#search{
+	top: 0;
+	height: 3vw;
+	font-size: 1.5vw;
+	border: 0.078125vw solid black;
+	border-radius: 0.125rem;
+}
+
+.col{
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+
+.searchButton{
+	margin-top: 2vw;
+	padding: 0;
+	height: 3vw;
+	width: 100%;
+	border: 0.078125vw solid black;
+	border-radius: 0.125rem;
+	background-color: white;
+}
+
+.searchButton:focus, .searchButton:active{
+	box-shadow: 0 0 0 0;
+	background-color: white;
+}
+
+.searchButton:hover{
+	background-color: #c4c4c4;
+}
+
+.collectionsPhoto{
+	font-size: 1500%;
+}
+
+.collection{
+	border-radius: 1rem;
+	margin: 0.5rem;
+	overflow-x: hidden;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.collection:hover, .collection:active{
+	cursor: pointer;
+	border: 1px solid black;
 }

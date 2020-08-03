@@ -32,7 +32,7 @@ export const attemptLogin = (emailId, password) => (dispatch) => {
 			throw errmess;
 		})
 		.then(response => response.json())
-		.then(response => dispatch(loginSuccessful(emailId, response.authorization)))
+		.then(response => dispatch(loginSuccessful(emailId, response.Authorization)))
 		.catch(error => dispatch(loginFailed(error.message)));
 }
 
@@ -93,3 +93,83 @@ export const attemptSignup = (email_id, password, firstname, lastname) => (dispa
 		.then(response => dispatch(attemptLogin(email_id, password)))
 		.catch(error => dispatch(loginFailed(error.message)));
 }
+
+export const listCollections = (authorization) => (dispatch) => {
+	
+	dispatch(collectionsLoading());
+
+	return fetch(baseUrl + 'collections/list', {
+		method: 'GET',
+		headers: {
+			'Authorization' : authorization,
+			'Content-Type': 'application/json'
+		},
+		credentials: 'same-origin'
+	})
+		.then(response=>{
+			if(response.ok){
+				return response;
+			}
+			else{
+				let error = new Error('Error' + response.status + ': ' + response.message)
+				error.response = response;
+				throw error;
+			}
+		},
+		error => {
+			let errmess = new Error(error.message);
+			throw errmess;
+		})
+		.then(response => response.json())
+		.then(response => dispatch(collectionsLoaded(response.list)))
+		.catch(error => dispatch(collectionsFailed(error.message)));
+}
+
+export const collectionsLoading = () => ({
+	type: ActionTypes.COLLECTIONS_LOADING
+})
+
+export const collectionsLoaded = (list) => ({
+	type: ActionTypes.COLLECTIONS_LOADED,
+	payload: list
+})
+
+export const collectionsFailed = (errMess) => ({
+	type: ActionTypes.COLLECTIONS_FAILED,
+	payload: errMess
+})
+
+export const newCollection = (authorization, collectionName) => (dispatch) => {
+	dispatch(collectionsLoading());
+
+	return fetch(baseUrl + 'collections/create?collection_name=' + collectionName, {
+		method: 'POST',
+		headers: {
+			'Authorization' : authorization,
+			'Content-Type': 'application/json'
+		},
+		credentials: 'same-origin'
+	})
+		.then(response=>{
+			if(response.ok){
+				return response;
+			}
+			else{
+				let error = new Error('Error' + response.status + ': ' + response.message)
+				error.response = response;
+				throw error;
+			}
+		},
+		error => {
+			let errmess = new Error(error.message);
+			throw errmess;
+		})
+		.then(response => response.json())
+		.then(response => dispatch(addCollection(collectionName)))
+		.catch(error => dispatch(collectionsFailed(error.message)));	
+}
+
+export const addCollection = (collectionName) => ({
+	type: ActionTypes.ADD_COLLECTION,
+	payload: collectionName
+})

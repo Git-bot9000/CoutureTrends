@@ -9,6 +9,7 @@ import cardImg2 from '../assets/images/card2.jpg';
 import cardImg3 from '../assets/images/card3.jpg';
 import {Row, Col, ButtonGroup, Button, Media, Card, CardImg, 
 	CardText, CardBody, CardTitle} from 'reactstrap';
+import { Control, LocalForm } from 'react-redux-form';
 
 class Home extends Component{
 	
@@ -27,12 +28,40 @@ class Home extends Component{
 		this.setState({
 			activeTab: tab 
 		})
+	}
+
+	handleSearch = (values) => {
+		alert('search attempted of: ' + values.search );
 	} 
+
 	render(){
 
 		const RenderSearchTab = ()=> {
 			if(this.state.activeTab === 1){
-				return(<div>Hello from 1</div>);
+				return(
+					<LocalForm onSubmit={(values) => this.handleSearch(values)}>
+					<Row className="form-group">
+						<Col className ='col-8 ofset-2'>
+							
+						</Col>
+					</Row>
+					<br />
+					<Row className='form-group'>
+                        <Col className = 'col-12'>
+                            <Control.text model=".search" id="search" name="search"
+                                placeholder=""
+                                className="form-control" />
+                        </Col>
+                    </Row>
+                    <Row>
+                    	<Col className='col-2 offset-5'>
+                        	<Button type = "submit" value = "submit" className = "buttonWhite searchButton">
+				            	Search
+				            </Button>
+				        </Col>
+                    </Row>
+					</LocalForm>
+				);
 			}
 			else{
 				return(<div>Hello from 2</div>);

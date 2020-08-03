@@ -139,8 +139,7 @@ class Header extends Component{
 
 		if(!this.props.login.isLoggedIn){
 			return(		
-				<LocalForm onSubmit={(values) => this.handleSubmitSignup(values)}>
-					
+				<LocalForm onSubmit={(values) => this.handleSubmitSignup(values)}>				
 					<Row className='form-group'>
                         <Label htmlFor="firstname" md={12}>First Name</Label>
                         <Col md={12}>
@@ -155,7 +154,7 @@ class Header extends Component{
                                 model=".firstname"
                                 show="touched"
                                 messages={{
-                                    require: 'Required',
+                                    required: 'Required',
                                     minLength: 'Must be atleast 3 characters',
                                     maxLength: 'Must be less than 16 characters'
                                 }}
@@ -176,7 +175,7 @@ class Header extends Component{
                                 model=".lastname"
                                 show="touched"
                                 messages={{
-                                    require: 'Required',
+                                    required: 'Required',
                                     minLength: 'Must be atleast 3 characters',
                                     maxLength: 'Must be less than 16 characters'
                                 }}
@@ -271,7 +270,7 @@ class Header extends Component{
 			if(this.props.login.isLoggedIn){
 				return(
 					<Col>
-						<Link to='/home'><i className="fa fa-user-circle-o fa-2x profileImg" aria-hidden="true"></i></Link>
+						<Link to='/collections' onClick={()=>this.props.listCollections(this.props.login.authorization)}><i className="fa fa-user-circle-o fa-2x profileImg" aria-hidden="true"></i></Link>
 					</Col>
 				);
 			}
@@ -287,9 +286,11 @@ class Header extends Component{
 		return(
 			<div className='aboveHeader'>
 				<Row className='header'>
-					<Col className='logo'>
-						LOGO
-					</Col>
+					<Link to='/home' style={{textDecoration: 'none'}}>
+						<Col className='logo'>
+							LOGO
+						</Col>
+					</Link>
 					<RenderHeader />
 				</Row>
 				{modalLogin}
