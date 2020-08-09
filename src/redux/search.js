@@ -20,7 +20,7 @@ export const Search = (state = {
 			return {...state, searchId: action.payload, productList: [], allProducts: []}
 
 		case ActionTypes.SEARCH_SUCCESSFUL:
-			return {...state, isLoading: false, errMess: null, productList: action.payload , allProducts: []}
+			return {...state, isLoading: false, errMess: null, productList: action.payload}
 
 		case ActionTypes.NUMBER_OF_PAGES:
 			return {...state, numberOfPages: action.payload}

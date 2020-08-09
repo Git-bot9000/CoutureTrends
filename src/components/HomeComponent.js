@@ -7,7 +7,7 @@ import mediaImg3 from '../assets/images/img3.jpg';
 import cardImg1 from '../assets/images/card1.jpg';
 import cardImg2 from '../assets/images/card2.jpg';
 import cardImg3 from '../assets/images/card3.jpg';
-import {Row, Col, ButtonGroup, Button, Media, Card, CardImg, 
+import {Row, Col, ButtonGroup, Button, Media, Input, Card, CardImg, 
 	CardText, CardBody, CardTitle} from 'reactstrap';
 import SearchBar from './SearchBar';
 
@@ -39,7 +39,13 @@ class Home extends Component{
 			);
 		}
 		else{
-			return(<div>Hello from 2</div>);
+			return(<div className='text-center' style={{fontSize: '1.5vw'}}>
+				<br />
+				Enter the website to be added:
+				<Input type = 'text'></Input>
+				<br />
+				<Button variant='dark' outline>Submit</Button>
+				</div>);
 		}
 	}
 
