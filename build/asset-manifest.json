@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.41be97bb.chunk.css",
+    "main.js": "/static/js/main.d2565673.chunk.js",
+    "main.js.map": "/static/js/main.d2565673.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.92ee656d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.92ee656d.js.map",
+    "static/css/2.7a8e6067.chunk.css": "/static/css/2.7a8e6067.chunk.css",
+    "static/js/2.cc343983.chunk.js": "/static/js/2.cc343983.chunk.js",
+    "static/js/2.cc343983.chunk.js.map": "/static/js/2.cc343983.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f2ae6efb74e59fd24a22cbf4f616ab1d.js": "/precache-manifest.f2ae6efb74e59fd24a22cbf4f616ab1d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.7a8e6067.chunk.css.map": "/static/css/2.7a8e6067.chunk.css.map",
+    "static/css/main.41be97bb.chunk.css.map": "/static/css/main.41be97bb.chunk.css.map",
+    "static/js/2.cc343983.chunk.js.LICENSE.txt": "/static/js/2.cc343983.chunk.js.LICENSE.txt",
+    "static/media/Jumbotron.jpg": "/static/media/Jumbotron.4350d6b3.jpg",
+    "static/media/card1.jpg": "/static/media/card1.064dc505.jpg",
+    "static/media/card2.jpg": "/static/media/card2.92d1703c.jpg",
+    "static/media/card3.jpg": "/static/media/card3.5d0a5a88.jpg",
+    "static/media/facebook.svg": "/static/media/facebook.44bbf921.svg",
+    "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/img1.jpg": "/static/media/img1.a0a46090.jpg",
+    "static/media/img2.jpg": "/static/media/img2.67358dae.jpg",
+    "static/media/img3.jpg": "/static/media/img3.996ff928.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.92ee656d.js",
+    "static/css/2.7a8e6067.chunk.css",
+    "static/js/2.cc343983.chunk.js",
+    "static/css/main.41be97bb.chunk.css",
+    "static/js/main.d2565673.chunk.js"
+  ]
+}
