@@ -417,3 +417,7 @@
 	cursor: pointer;
 	border: 1px solid black;
 }
+
+.filterCategory:hover, .filterCategory:active, .filterCategory:focus{
+	cursor: pointer;
+}

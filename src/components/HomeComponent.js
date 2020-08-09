@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Image} from 'react-bootstrap'
+import {Image} from 'react-bootstrap';
 import bgimg from '../assets/images/Jumbotron.jpg';
 import mediaImg1 from '../assets/images/img1.jpg';
 import mediaImg2 from '../assets/images/img2.jpg';
@@ -9,19 +9,15 @@ import cardImg2 from '../assets/images/card2.jpg';
 import cardImg3 from '../assets/images/card3.jpg';
 import {Row, Col, ButtonGroup, Button, Media, Card, CardImg, 
 	CardText, CardBody, CardTitle} from 'reactstrap';
-import { Control, LocalForm } from 'react-redux-form';
+import SearchBar from './SearchBar';
 
 class Home extends Component{
 	
 	constructor(props){
 		super(props);
 		this.state = {
-			activeTab: 1
+			activeTab: 1,
 		};
-	}
-
-	componentDidMount = () => {
-		document.getElementById(this.state.activeTab).focus();
 	}
 
 	toggleTab = (tab) => {
@@ -30,43 +26,24 @@ class Home extends Component{
 		})
 	}
 
-	handleSearch = (values) => {
-		alert('search attempted of: ' + values.search );
-	} 
+	componentDidMount = () => {
+		document.getElementById(this.state.activeTab).focus();
+	}
+
+	RenderSearchTab = () => {
+		if(this.state.activeTab === 1){
+			return(
+				<SearchBar createSearch={this.props.createSearch}
+				search={this.props.search}
+				clearSearchError={this.props.clearSearchError} />
+			);
+		}
+		else{
+			return(<div>Hello from 2</div>);
+		}
+	}
 
 	render(){
-
-		const RenderSearchTab = ()=> {
-			if(this.state.activeTab === 1){
-				return(
-					<LocalForm onSubmit={(values) => this.handleSearch(values)}>
-					<Row className="form-group">
-						<Col className ='col-8 ofset-2'>
-							
-						</Col>
-					</Row>
-					<br />
-					<Row className='form-group'>
-                        <Col className = 'col-12'>
-                            <Control.text model=".search" id="search" name="search"
-                                placeholder=""
-                                className="form-control" />
-                        </Col>
-                    </Row>
-                    <Row>
-                    	<Col className='col-2 offset-5'>
-                        	<Button type = "submit" value = "submit" className = "buttonWhite searchButton">
-				            	Search
-				            </Button>
-				        </Col>
-                    </Row>
-					</LocalForm>
-				);
-			}
-			else{
-				return(<div>Hello from 2</div>);
-			}
-		}
 		
 		return(
 			<div>
@@ -84,7 +61,7 @@ class Home extends Component{
 		    		</Row>
 			    </div>
 			    <div className="col-8 offset-2 searchTabBottom">
-			    	<RenderSearchTab />
+			    	<this.RenderSearchTab />
 			    </div>
 			    <div className='d-none d-sm-block'>
 				    <Media className='Media1'>

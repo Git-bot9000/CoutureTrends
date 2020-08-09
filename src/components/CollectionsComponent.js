@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { ListGroup, ListGroupItem, Button, Row, Col, Modal, ModalHeader, ModalBody, Label } from 'reactstrap';
+import { ListGroup, ListGroupItem, Button, Row, Col, Modal, ModalHeader, 
+	ModalBody, Label } from 'reactstrap';
 import { Loading } from './LoadingComponent';
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
