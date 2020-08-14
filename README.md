@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is front end design of fashion intelligence system created using create-react-app
+
 ## Available Scripts
 
 In the project directory, you can run:
